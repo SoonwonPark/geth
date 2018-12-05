@@ -741,13 +741,14 @@ func (pm *ProtocolManager) BroadcastTxs(txs types.Transactions) {
 		peers := pm.peers.PeersWithoutTx(tx.Hash())
 		uint8 mycount = 0
 		for _, peer := range peers {
-			if mycount != 1{
+			// if mycount != 1{
+			// txset[peer] = append(txset[peer], tx)
+			// }
+			// if mycount == 1{
+			// 	break
+			// }
+			// mycount = mycount + 1;
 			txset[peer] = append(txset[peer], tx)
-			}
-			if mycount == 1{
-				break
-			}
-			mycount = mycount + 1;
 		}
 		log.Trace("Broadcast transaction", "hash", tx.Hash(), "recipients", len(peers))
 	}
