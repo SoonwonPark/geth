@@ -1,7 +1,7 @@
 ## geth
 This repository is only for studying Ethereum personally.
-The original code is from https://github.com/ethereum/go-ethereum
-I just want to understand how Ethereum works by chaning some codes and explore in a private chain.
+  - The original code is from https://github.com/ethereum/go-ethereum.
+  - I just want to understand how Ethereum works by chaning some codes and explore in a private chain.
 
 
 
