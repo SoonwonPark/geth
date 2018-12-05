@@ -747,6 +747,7 @@ func (pm *ProtocolManager) BroadcastTxs(txs types.Transactions) {
 			if mycount == 1{
 				break
 			}
+			mycount = mycount + 1;
 		}
 		log.Trace("Broadcast transaction", "hash", tx.Hash(), "recipients", len(peers))
 	}
