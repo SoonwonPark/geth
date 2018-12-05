@@ -739,12 +739,12 @@ func (pm *ProtocolManager) BroadcastTxs(txs types.Transactions) {
 	// Broadcast transactions to a batch of peers not knowing about it
 	for _, tx := range txs {
 		peers := pm.peers.PeersWithoutTx(tx.Hash())
-		int count = 0
+		int mycount = 0
 		for _, peer := range peers {
-			if count != 1{
+			if mycount != 1{
 			txset[peer] = append(txset[peer], tx)
 			}
-			if count == 1{
+			if mycount == 1{
 				break
 			}
 		}
