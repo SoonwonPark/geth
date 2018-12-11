@@ -731,8 +731,9 @@ func (pm *ProtocolManager) BroadcastBlock(block *types.Block, propagate bool) {
 	}
 }
 
-// BroadcastTxs will propagate a batch of transactions to all peers which are not known to
+// BroadcastTxs will propagate a batch of transactions to the first peer which are not known to
 // already have the given transaction.
+// It is possible to change the targer peer by modifying 'i == Number'condition
 func (pm *ProtocolManager) BroadcastTxs(txs types.Transactions) {
 	var txset = make(map[*peer]types.Transactions)
 
